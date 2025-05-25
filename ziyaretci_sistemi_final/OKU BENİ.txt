@@ -1,0 +1,11 @@
+ Bu uygulamayı çalıştırmak için aşağıda ki adımları izlemelisiniz.
+
+1.Python 3.x yüklü olmalı (https://www.python.org/downloads/)
+
+2.Kütüphanelerin yüklü olması gerekir.Yoksa cmd üzerinden "pip install -r requirements.txt" komutu ile yükliyebilirsiniz.
+
+3.Uygulamayı açmak için doğrudan run_server.bat dosyasına çift tıklayın.
+
+4.Tarayıcıdan bu adresi giriniz http://127.0.0.1:5000/ 
+
+5.kullanıcı adı :admin , şifre: 1234

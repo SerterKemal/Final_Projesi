@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yönetici Paneli</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: #f4f6fa;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .panel {
+            max-width: 650px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 28px rgba(50,60,120,0.08);
+            padding: 32px 40px;
+            text-align: center;
+        }
+        .panel h1 {
+            color: #2647a9;
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+        }
+        .panel .btn {
+            display: inline-block;
+            margin: 12px 14px;
+            padding: 14px 28px;
+            border-radius: 9px;
+            background: #2647a9;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            transition: background 0.15s;
+        }
+        .panel .btn:hover {
+            background: #466ef5;
+        }
+        .panel .info {
+            margin: 18px 0 0;
+            color: #888;
+            font-size: 1rem;
+        }
+        .panel .logout {
+            position: absolute;
+            top: 25px;
+            right: 38px;
+        }
+        @media (max-width:700px){
+            .panel { padding: 22px 4vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <a href="{{ url_for('cikis') }}" class="btn logout">Çıkış</a>
+        <h1>Yönetici Paneli</h1>
+        <div>
+           <a href="{{ url_for('ziyaretci_ekle') }}" class="btn btn-primary">Ziyaretçi Ekle</a>
+    <a href="{{ url_for('ziyaretci_listesi') }}" class="btn btn-primary">Ziyaretçi Listesi</a>
+    <a href="{{ url_for('istatistikler') }}" class="btn btn-primary">İstatistikler</a>
+    </button>
+</a>
+
+            
+        </div>
+        <div class="info">
+            👮 Hoş geldiniz, {{ current_user.username }} <br>
+            <span style="font-size: 0.9em;">Ziyaretçi kayıtlarını buradan kolayca yönetin.</span>
+        </div>
+    </div>
+</body>
+</html>

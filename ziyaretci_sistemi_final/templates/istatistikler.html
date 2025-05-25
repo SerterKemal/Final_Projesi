@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ziyaretçi İstatistikleri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f0f2f5; }
+        .container { margin-top: 60px; }
+        .card {
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(50,60,120,0.07);
+            border: none;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .istatistik-sayi { font-size: 2.4rem; font-weight: bold; color: #2647a9;}
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="card p-4 text-center">
+        <h2 class="mb-4">Ziyaretçi İstatistikleri</h2>
+        <div class="mb-3">
+            <div>Toplam Ziyaretçi</div>
+            <div class="istatistik-sayi">{{ toplam }}</div>
+        </div>
+        <div class="mb-3">
+            <div>Bugünkü Ziyaretçi</div>
+            <div class="istatistik-sayi">{{ bugun }}</div>
+        </div>
+        <div>
+            <div>Son 7 Günde Ziyaretçi</div>
+            <div class="istatistik-sayi">{{ son_7_gun }}</div>
+        </div>
+        <hr>
+        <a href="{{ url_for('index') }}" class="btn btn-outline-primary mt-2">Ana Menüye Dön</a>
+      </div>
+    </div>
+</body>
+</html>
